@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="MainPane" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="114.0" layoutX="15.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" width="186.0" />
+      <Label layoutX="37.0" layoutY="14.0" text="%AddItem" />
+      <GridPane layoutX="15.0" layoutY="32.0" prefHeight="62.0" prefWidth="177.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="358.0" minWidth="10.0" prefWidth="116.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="9.0" prefWidth="61.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="%ItemVal" />
+            <Label text="%ItemWeight" GridPane.rowIndex="1" />
+            <TextField fx:id="ItValue" GridPane.columnIndex="1" />
+            <TextField fx:id="ItWeight" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="DodajPrzedmiot" alignment="CENTER" layoutX="49.0" layoutY="103.0" mnemonicParsing="false" onMouseClicked="#DodajPrzedmiotClicked" prefHeight="25.0" prefWidth="118.0" text="%AddItemBtn" />
+      <Label fx:id="ItemNumber" layoutX="60.0" layoutY="454.0" text="%NumberOfItems" />
+      <ImageView fx:id="Polska" fitHeight="150.0" fitWidth="200.0" layoutX="15.0" layoutY="486.0" onMouseClicked="#PolskaClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../pictures/Polska.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="USA" fitHeight="164.0" fitWidth="200.0" layoutX="225.0" layoutY="486.0" onMouseClicked="#USAClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../pictures/USA.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="UK" fitHeight="150.0" fitWidth="200.0" layoutX="438.0" layoutY="486.0" onMouseClicked="#UKClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../pictures/GB.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="PickAlg" layoutX="343.0" layoutY="68.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="289.0" />
+
+
+      <Label layoutX="226.0" layoutY="72.0" text="%ChooseAlg" />
+      <Button fx:id="Execute" contentDisplay="CENTER" layoutX="229.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#ExecuteClicked" prefHeight="45.0" prefWidth="406.0" text="%ExecuteAlg" textAlignment="CENTER" />
+      <ImageView fitHeight="195.0" fitWidth="200.0" layoutX="432.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../pictures/backpackbricks.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="225.0" layoutY="37.0" text="%MaxWeight" />
+      <TextField fx:id="MaxWeight" layoutX="342.0" layoutY="33.0" prefHeight="25.0" prefWidth="289.0" />
+      <TableView fx:id="tableview" layoutX="15.0" layoutY="157.0" prefHeight="299.0" prefWidth="186.0">
+        <columns>
+          <TableColumn fx:id="IDCol" prefWidth="30.0" text="ID" />
+          <TableColumn fx:id="ValueCol" prefWidth="80.0" text="%Value" />
+          <TableColumn fx:id="WeightCol" prefWidth="80.0" text="%Weight" />
+        </columns>
+      </TableView>
+      <ScrollPane fx:id="scrollpane" layoutX="225.0" layoutY="162.0" prefHeight="114.0" prefWidth="406.0">
+      </ScrollPane>
+      <Label fx:id="Time" layoutX="538.0" layoutY="6.0" text="" />
+   </children>
+</AnchorPane>

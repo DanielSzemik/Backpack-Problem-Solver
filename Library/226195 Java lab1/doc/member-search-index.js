@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"lab1","c":"Instance","l":"getlist()"},{"p":"lab1","c":"Instance","l":"getpojemnosc()"},{"p":"lab1","c":"Instance","l":"Instance(List<Item>, int)","url":"Instance-java.util.List-int-"},{"p":"lab1","c":"Instance","l":"listarzeczy"},{"p":"lab1","c":"Instance","l":"pojemnosc"}]
